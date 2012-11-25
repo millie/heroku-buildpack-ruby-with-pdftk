@@ -2,6 +2,7 @@
 
 # sync output
 $stdout.sync = true
+puts "HEROKU-BUILDPACK-RUBY with PDFTK"
 
 $:.unshift File.expand_path("../../lib", __FILE__)
 require "language_pack"
