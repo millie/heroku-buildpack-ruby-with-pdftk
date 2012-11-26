@@ -33,6 +33,7 @@ class LanguagePack::Ruby < LanguagePack::Base
     vars = {
       "LANG"     => "en_US.UTF-8",
       "PATH"     => default_path,
+      "LD_LIBRARY_PATH" => "/app/vendor/pdftk/lib",
       "GEM_PATH" => slug_vendor_base,
     }
 
@@ -67,7 +68,7 @@ private
   # the base PATH environment variable to be used
   # @return [String] the resulting PATH
   def default_path
-    "bin:#{slug_vendor_base}/bin:/usr/local/bin:/usr/bin:/bin"
+    "bin:#{slug_vendor_base}/bin:/usr/local/bin:/usr/bin:/bin:/app/vendor/pdftk/bin"
   end
 
   # the relative path to the bundler directory of gems
