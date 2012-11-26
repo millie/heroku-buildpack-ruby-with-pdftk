@@ -6,7 +6,7 @@ class Pdftk < BaseCustom
     "pdftk"
   end
   def source_url
-    "http://yeah-i-m-rock.s3-website-us-east-1.amazonaws.com/pdftk.tar.gz"
+    "https://s3.amazonaws.com/pdftk/pdftk.tar.gz"
   end
   def used?
     File.exist?("#{build_path}/bin/pdftk") && File.exist?("#{build_path}/bin/lib/libgcj.so.12")
